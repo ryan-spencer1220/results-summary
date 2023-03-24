@@ -1,8 +1,13 @@
+body {
+  margin: 0;
+}
+
 .card {
   display: flex;
   font-family: "Hanken Grotesk", sans-serif;
   color: rgba(227, 227, 227, 0.5);
   flex-direction: column;
+  align-items: center;
 }
 
 .score-section {
@@ -23,14 +28,16 @@
 .number {
   border-radius: 50%;
   background-image: linear-gradient(
-    hsla(241, 72%, 46%, 0),
-    hsla(256, 72%, 46%, 1)
+    hsla(256, 72%, 46%, 1),
+    hsla(241, 72%, 46%, 0)
   );
   width: 100px;
   height: 100px;
   display: flex;
   align-items: center;
+  justify-content: center;
   place-self: center;
+  flex-direction: column;
 }
 
 #seventy-six {
@@ -44,14 +51,124 @@
   font-size: 14px;
 }
 
+.row {
+  border-radius: 10px;
+  margin: 10px 20px 10px 20px;
+  padding: 12px;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+img {
+  margin-right: 10px;
+}
+
+#red {
+  color: hsl(0, 100%, 67%);
+  background-color: hsl(0, 100%, 95%);
+}
+
+#yellow {
+  color: hsl(39, 100%, 56%);
+  background-color: hsl(39, 100%, 95%);
+}
+
+#green {
+  color: hsl(166, 100%, 37%);
+  background-color: hsl(166, 100%, 95%);
+}
+
+#purple {
+  color: hsl(234, 85%, 45%);
+  background-color: hsl(234, 85%, 95%);
+}
+
 h2 {
   color: white;
 }
 
 p {
-  margin: -10px 100px 40px 100px;
+  margin: -10px 60px 40px 60px;
 }
 
 h3 {
   color: black;
+  margin: 20px;
+}
+
+button {
+  background-color: hsl(224, 30%, 27%);
+  border-radius: 24px;
+  color: white;
+  padding: 16px 120px 16px 120px;
+  margin: 20px;
+  letter-spacing: 1px;
+  border: none;
+}
+
+.fractions {
+  color: hsl(224, 30%, 27%, 50%);
+  font-weight: bold;
+}
+
+.fractions > span {
+  color: black;
+}
+
+@media (min-width: 630px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+  }
+
+  .card {
+    flex-direction: row;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+    border-radius: 20px;
+  }
+
+  .score-section {
+    width: 320px;
+    height: 400px;
+    border-radius: 20px;
+  }
+
+  p {
+    margin: -10px 40px 40px 40px;
+  }
+
+  .number {
+    height: 140px;
+    width: 140px;
+  }
+
+  .summary-section {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 300px;
+    height: 380px;
+  }
+
+  .summary-section > * {
+    margin: 8px;
+  }
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 80px 16px 80px;
+    flex-basis: 100%;
+    max-height: 46px;
+  }
 }
