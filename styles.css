@@ -108,6 +108,10 @@ button {
   border: none;
 }
 
+button:hover {
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
 .fractions {
   color: hsl(224, 30%, 27%, 50%);
   font-weight: bold;
